@@ -28,16 +28,22 @@ header{
     border-radius: 30px;
     padding: 3px;  
 }
+.cajaNav{
+    display: flex;
+    justify-content:space-between;
+}
 
 li {
     color: gray;
     list-style: none;
+    
 }
 
 li a{
     text-decoration: none;
     color: grey;
     cursor: pointer;
+    line-height: 20px;
 
 }
 
@@ -112,6 +118,7 @@ footer{
     font-weight: 300;
     font-size: 15px;
     line-height: 8px;
+    padding: 15px;
 }
 .contacto, .redes-sociales {
     color: #f5f5dc;
@@ -125,16 +132,19 @@ footer{
     display: flex;
     align-items: center;
 }
+
 .padre-cards{
     width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+
 .card{
 
+    display: flex;
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 8px;
-    margin-right: 8px;
     background-color:rgba(248, 244, 244, 0.8) ;
     border: none; 
     
