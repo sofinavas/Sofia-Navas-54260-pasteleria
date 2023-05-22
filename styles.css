@@ -52,7 +52,11 @@ li a{
     height: 280px;
     object-fit: cover;
     margin: 5px;
-    border-radius: 5px;   
+    border-radius: 5px;
+    transition: 1s;   
+}
+.torta:hover{
+    transform: scale(1.3);
 }
 
 main{
@@ -78,8 +82,7 @@ main a{
 .iconos {
     width: 30px;
     height: 30px;
-    padding: 25px;
-    background-color: aqua;
+    
 }
 
 #logo {
@@ -103,8 +106,8 @@ h1{
 }
 footer{
     background-color: rgb(58, 56, 56);
-    padding: 20px;
-    height: 220px;
+    padding: 30px;
+    max-height: 400px;
 }
 
 .footer{
@@ -113,16 +116,10 @@ footer{
 }
 
 .footer a{
-   color: beige; 
-   text-decoration: none;
+    color: beige; 
+    text-decoration: none;
 }
-/*.footer a, li, p{
-    
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 8px;
-    padding: 15px;
-}*/
+
 .contacto, .redes-sociales {
     color: #f5f5dc;
     display: flex;
@@ -131,10 +128,6 @@ footer{
     align-items: center;
     margin-bottom: 20px;
 }
-/*.iconos-redes{
-    display: flex;
-    align-items: center;
-}*/
 
 .padre-cards{
     width: 100%;
@@ -143,15 +136,12 @@ footer{
 }
 
 .card{
-
     display: flex;
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
     background-color:rgba(248, 244, 244, 0.8) ;
-    border: none; 
-    
-    
+    border: none;    
 }
 
 .descripción-producto{
@@ -197,10 +187,21 @@ footer{
 form{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 220px;
     padding: 20px;
-
 }
+@media (min-width: 768px){
+    form{
+        width: 400px;
+        }
+}
+
+@media (min-width: 1024px){
+    form{
+        width: 500px;
+        }
+}
+
 .iconos-contacto{
     width: 40px;
 }
