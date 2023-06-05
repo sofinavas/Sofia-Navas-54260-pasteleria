@@ -219,7 +219,7 @@ form {
 
 .logo-contacto {
   display: flex;
-  width: 250px;
+  flex-direction: column;
   margin-top: 30px;
   align-items: center;
   justify-content: space-around;
@@ -230,6 +230,15 @@ form {
   font-weight: 500;
   background-color: rgba(248, 244, 244, 0.7);
   padding: 10px;
+  font-size: 11px;
+}
+@media (min-width: 768px) {
+  .logo-contacto {
+    flex-direction: row;
+  }
+  .logo-contacto p {
+    font-size: 18px;
+  }
 }
 
 .formulario {
@@ -241,6 +250,12 @@ form {
 #formulario-contacto label {
   color: rgb(58, 58, 58);
   background-color: rgba(248, 244, 244, 0.7);
+  font-size: 13px;
+}
+@media (min-width: 768px) {
+  #formulario-contacto label {
+    font-size: 18px;
+  }
 }
 
 .mapa {
@@ -253,6 +268,12 @@ form {
   color: rgb(58, 58, 58);
   background-color: rgba(248, 244, 244, 0.7);
   padding: 10px;
+  font-size: 11px;
+}
+@media (min-width: 768px) {
+  .mapa p {
+    font-size: 18px;
+  }
 }
 
 header nav {
