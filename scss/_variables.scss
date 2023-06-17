@@ -3,3 +3,27 @@ $fucsia: #c34262;
 $beige: #e0bc88;
 $marron: #7f7058;
 $neutro:#cfcfcf;
+$gris:gray;
+$fondo-translucido: rgba(248, 244, 244, 0.7);
+$gris-p: rgb(58, 58, 58);
+$gris-o: rgb(29, 28, 28);
+
+/*FUENTES*/
+$font-family: 'Montserrat', sans-serif;
+$fuente-mini: 11px;
+$fuente-chica: 14px;
+$fuente-media: 18px;
+$fuente-grande: 26px;
+
+/*RESOLUCIONES DE PANTALLAS*/
+$tablet: 768px;
+$desktop: 992px;
+$desktopXG: 1200px;
+
+/*MIXIN*/
+@mixin flex-column-centrado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

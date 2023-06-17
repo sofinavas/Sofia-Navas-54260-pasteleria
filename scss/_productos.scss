@@ -1,0 +1,94 @@
+
+main{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+        font-weight:500;
+        color: $gris;
+        cursor: pointer; 
+        font-size: 1.1em;
+        display: flex;
+        justify-content: center;
+        background-color:rgba(248, 244, 244, 0.8) ;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+}
+.torta{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 1s;   
+
+    &:hover{
+            transform: scale(1.1);
+    }
+}
+
+.padre-cards{
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color:rgba(248, 244, 244, 0.8) ;
+    border: none;    
+}
+
+.descripción-producto{
+    @include flex-column-centrado;
+    border-radius: 5px;
+    background-color: transparent;
+    
+}
+
+.agregar-al-carrito{
+    background-color: $gris-p;
+    padding: 8px 12px;
+    color: $neutro;
+    font-size: 12px;
+    font-weight: 100;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 12rem;
+    margin-bottom: 6px;
+
+    &:hover{
+        background-color: $neutro;
+        color: $gris-p;
+        font-weight: 500;
+    }
+}
+.nombre-producto{
+    font-size: $fuente-media;
+    font-weight: 300;
+    color: $gris-o;
+    line-height: 30px;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+
+    @media (min-width: $tablet ) {
+    font-size: $fuente-chica +2;
+    }
+    @media (min-width: $desktop ) {
+        font-size: $fuente-media;
+        }
+}
+
+.precio-producto{
+    padding: 0px 40px;
+    font-weight: 500;
+    font-size: $fuente-media -1;
+    color:$gris-o ;
+    line-height: 30px;
+}

@@ -1,0 +1,94 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+
+    @media (min-width: $tablet){
+        width: 400px;
+        }
+    
+    @media (min-width: $desktop){
+        width: 500px;
+        }
+}
+
+.iconos-contacto{
+    width: 40px;
+    object-fit: cover;
+    margin: 20px;
+}
+.info-contacto{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:space-around;
+    padding-top: 60px;
+}
+
+.logo-contacto{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: flex-end;
+    color: $gris-p;
+    p{
+        color: $gris-p;
+        font-weight: 500;
+        background-color: $fondo-translucido;
+        padding: 10px;
+        font-size: $fuente-mini;    
+    }
+    @media (min-width: $tablet){
+        flex-direction: row;
+        p{
+            font-size: $fuente-media;
+        }
+        }
+
+}
+.pagina-contacto{
+    @media (max-width: $tablet){
+        display:none;
+    }
+}
+
+.formulario{
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#formulario-contacto{
+    width: 300px;
+    
+    label{
+    color: $gris-p;
+    background-color: $fondo-translucido;
+    font-size: $fuente-chica;}
+
+    @media (min-width: $tablet){
+        font-size: $fuente-media;
+        width: 500px;
+        }
+}
+.mapa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    p{
+        color: $gris-p;
+        background-color: $fondo-translucido;
+        padding: 10px;
+        font-size: $fuente-mini;
+        @media (min-width: $tablet){
+            font-size: $fuente-media;
+            }
+    }
+        @media (min-width: $tablet){
+        justify-content: flex-start;
+        margin-left: 100px;
+        }
+}

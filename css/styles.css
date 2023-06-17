@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /*PALETAS DE COLORES*/
+/*FUENTES*/
+/*RESOLUCIONES DE PANTALLAS*/
+/*MIXIN*/
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +10,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #e8bc88;
+  background-color: #e0bc88;
   background-image: url("/img/disenioCaja.webp");
 }
 
@@ -24,11 +27,18 @@ header {
   z-index: 1;
 }
 
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
 .logo-sombrero {
   width: 60px;
   height: 60px;
   object-fit: contain;
-  background-color: rgb(195, 66, 98);
+  background-color: #c34262;
   margin: 10px;
   border-radius: 30px;
   padding: 3px;
@@ -45,55 +55,30 @@ li {
 }
 li a {
   text-decoration: none;
-  color: grey;
+  color: gray;
   cursor: pointer;
   line-height: 20px;
 }
 
-.torta {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  margin: 5px;
-  border-radius: 5px;
-  transition: 1s;
-}
-.torta:hover {
-  transform: scale(1.3);
-}
-
-main {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-main a {
-  text-decoration: none;
-  font-weight: 500;
-  color: gray;
-  cursor: pointer;
-  font-size: 1.1em;
-  display: flex;
-  justify-content: center;
-  background-color: rgba(248, 244, 244, 0.8);
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-
-.iconos {
+.iconos, .footer a:hover {
   width: 30px;
   height: 30px;
 }
+.iconos:hover, .footer a:hover {
+  background-color: rgba(248, 244, 244, 0.7);
+  border-radius: 5px;
+}
 
+/*MIXIN*/
 #logo {
   width: 100%;
   height: 230px;
+  background-color: rgba(248, 244, 244, 0.8);
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  background-color: rgba(248, 244, 244, 0.8);
   justify-content: center;
   align-items: center;
-  background-attachment: fixed;
 }
 #logo img {
   width: 250px;
@@ -106,17 +91,22 @@ h1 {
 }
 
 footer {
-  background-color: rgb(58, 56, 56);
+  background-color: rgb(58, 58, 58);
   padding: 30px;
   max-height: 400px;
 }
 
+/*EXTEND*/
 .footer {
   color: #e0bc88;
 }
 .footer a {
   color: #e0bc88;
   text-decoration: none;
+  transition: 0.2s;
+}
+.footer a:hover {
+  color: rgb(58, 58, 58);
 }
 
 .num-tel {
@@ -131,156 +121,6 @@ footer {
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
-}
-
-.padre-cards {
-  width: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background-color: rgba(248, 244, 244, 0.8);
-  border: none;
-}
-
-.descripción-producto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5px;
-  background-color: transparent;
-}
-
-.agregar-al-carrito {
-  background-color: rgb(58, 58, 58);
-  padding: 8px 12px;
-  color: rgb(245, 245, 236);
-  font-size: 12px;
-  font-weight: 100;
-  cursor: pointer;
-  border-radius: 3px;
-  width: 12rem;
-  margin-bottom: 6px;
-}
-
-.nombre-producto {
-  font-size: 18px;
-  padding: 1px 40px;
-  font-weight: 300;
-  color: rgb(29, 28, 28);
-  line-height: 30px;
-}
-@media (min-width: 768px) {
-  .nombre-producto {
-    font-size: 15px;
-  }
-}
-
-.precio-producto {
-  padding: 0px 40px;
-  font-weight: 500;
-  font-size: 17px;
-  color: rgb(29, 28, 28);
-  line-height: 30px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 220px;
-  padding: 20px;
-}
-@media (min-width: 768px) {
-  form {
-    width: 400px;
-  }
-}
-@media (min-width: 1024px) {
-  form {
-    width: 500px;
-  }
-}
-
-.iconos-contacto {
-  width: 40px;
-}
-
-.info-contacto {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding-top: 60px;
-}
-
-.logo-contacto {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  align-items: center;
-  justify-content: space-around;
-  color: rgb(58, 58, 58);
-}
-.logo-contacto p {
-  color: rgb(58, 58, 58);
-  font-weight: 500;
-  background-color: rgba(248, 244, 244, 0.7);
-  padding: 10px;
-  font-size: 11px;
-}
-@media (min-width: 768px) {
-  .logo-contacto {
-    flex-direction: row;
-  }
-  .logo-contacto p {
-    font-size: 18px;
-  }
-}
-
-.formulario {
-  height: 25px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-#formulario-contacto label {
-  color: rgb(58, 58, 58);
-  background-color: rgba(248, 244, 244, 0.7);
-  font-size: 13px;
-}
-@media (min-width: 768px) {
-  #formulario-contacto label {
-    font-size: 18px;
-  }
-}
-
-.mapa {
-  display: flex;
-  align-items: center;
-  padding-bottom: 80px;
-  padding-left: 100px;
-}
-.mapa p {
-  color: rgb(58, 58, 58);
-  background-color: rgba(248, 244, 244, 0.7);
-  padding: 10px;
-  font-size: 11px;
-}
-@media (min-width: 768px) {
-  .mapa p {
-    font-size: 18px;
-  }
-}
-
-header nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
 }
 
 #carouselExampleAutoplaying {
@@ -304,8 +144,209 @@ header nav {
     height: 500px;
   }
 }
-h1 {
-  font-size: 23px;
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+main a {
+  text-decoration: none;
+  font-weight: 500;
+  color: gray;
+  cursor: pointer;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(248, 244, 244, 0.8);
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.torta {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 5px;
+  transition: 1s;
+}
+.torta:hover {
+  transform: scale(1.1);
+}
+
+.padre-cards {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgba(248, 244, 244, 0.8);
+  border: none;
+}
+
+.descripción-producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.agregar-al-carrito {
+  background-color: rgb(58, 58, 58);
+  padding: 8px 12px;
+  color: #cfcfcf;
+  font-size: 12px;
+  font-weight: 100;
+  cursor: pointer;
+  border-radius: 3px;
+  width: 12rem;
+  margin-bottom: 6px;
+}
+.agregar-al-carrito:hover {
+  background-color: #cfcfcf;
+  color: rgb(58, 58, 58);
+  font-weight: 500;
+}
+
+.nombre-producto {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(29, 28, 28);
+  line-height: 30px;
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .nombre-producto {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .nombre-producto {
+    font-size: 18px;
+  }
+}
+
+.precio-producto {
+  padding: 0px 40px;
+  font-weight: 500;
+  font-size: 18px -1;
+  color: rgb(29, 28, 28);
+  line-height: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  form {
+    width: 400px;
+  }
+}
+@media (min-width: 992px) {
+  form {
+    width: 500px;
+  }
+}
+
+.iconos-contacto {
+  width: 40px;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.info-contacto {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+
+.logo-contacto {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  align-items: flex-end;
+  color: rgb(58, 58, 58);
+}
+.logo-contacto p {
+  color: rgb(58, 58, 58);
+  font-weight: 500;
+  background-color: rgba(248, 244, 244, 0.7);
+  padding: 10px;
+  font-size: 11px;
+}
+@media (min-width: 768px) {
+  .logo-contacto {
+    flex-direction: row;
+  }
+  .logo-contacto p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagina-contacto {
+    display: none;
+  }
+}
+
+.formulario {
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+#formulario-contacto {
+  width: 300px;
+}
+#formulario-contacto label {
+  color: rgb(58, 58, 58);
+  background-color: rgba(248, 244, 244, 0.7);
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  #formulario-contacto {
+    font-size: 18px;
+    width: 500px;
+  }
+}
+
+.mapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+  padding-top: 50px;
+}
+.mapa p {
+  color: rgb(58, 58, 58);
+  background-color: rgba(248, 244, 244, 0.7);
+  padding: 10px;
+  font-size: 11px;
+}
+@media (min-width: 768px) {
+  .mapa p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .mapa {
+    justify-content: flex-start;
+    margin-left: 100px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
