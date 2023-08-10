@@ -1,4 +1,5 @@
-
+import { carrito } from '../data/carrito.js';
+import { productos } from '../data/productos.js';
 
 let productosHTML = '';
 
@@ -39,10 +40,19 @@ document.querySelectorAll('.js-agregar-al-carrito')
       carrito.push({
         idProducto: idProducto,
         cantidad: 1
-      })
+      });
     }
 
-   
-    console.log(carrito)
+    let cantidadCarrito = 0;
+
+
+    carrito.forEach ((item)=>{
+      cantidadCarrito += item.cantidad;
+
+    });
+
+    document.querySelector('.js-cantidad-carrito')
+    .innerHTML = cantidadCarrito;
+
   })
 })

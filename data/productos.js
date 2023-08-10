@@ -1,4 +1,4 @@
-const productos = [{
+export const productos = [{
   id: '1t',
   imagen: '../img/chaja-entera.webp',
   nombre: 'Chajá',

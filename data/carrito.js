@@ -1,1 +1,1 @@
-const carrito = [];
+export const carrito = [];

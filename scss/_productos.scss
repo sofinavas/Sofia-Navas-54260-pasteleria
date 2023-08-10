@@ -78,7 +78,7 @@ main{
     margin-bottom: 0px;
 
     @media (min-width: $tablet ) {
-    font-size: $fuente-chica +2;
+    font-size: $fuente-chica (+2);
     }
     @media (min-width: $desktop ) {
         font-size: $fuente-media;
